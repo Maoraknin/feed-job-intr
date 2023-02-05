@@ -1,0 +1,22 @@
+.comment-add{
+    background-color: $s-clr1;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .add-input-container{
+        display: flex;
+        justify-content: space-between;
+
+        input{
+            width: 205px;
+        }
+    }
+
+    button{
+        align-self: center;
+    }
+}

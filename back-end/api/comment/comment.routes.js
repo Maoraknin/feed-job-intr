@@ -1,5 +1,4 @@
 const express = require('express')
-// const {log} = require('../../middlewares/logger.middleware')
 const {addComment, getComments} = require('./comment.controller')
 const router = express.Router()
 

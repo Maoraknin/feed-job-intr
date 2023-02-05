@@ -20,13 +20,10 @@
 
 
 // Home Components
-@import "cmps/home/home-hero";
-@import "cmps/home/home-preview";
-@import "cmps/home/home-stories";
-@import "cmps/home/home-teaser";
+@import "cmps/home/comment-index";
+@import "cmps/home/comment-list";
+@import "cmps/home/comment-preview";
+@import "cmps/home/comment-add";
 
-// About Components
-@import "cmps/about/about-hero";
-@import "cmps/about/about-directors";
-@import "cmps/clients/clients-stories";
-// @import "cmps/home/home-teaser";
+
+

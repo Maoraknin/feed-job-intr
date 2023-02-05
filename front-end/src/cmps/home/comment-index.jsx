@@ -5,7 +5,7 @@ import { CommentList } from "./comment-list.jsx";
 
 export function CommentIndex() {
     return (
-        <section className='commend-index'>
+        <section className='comment-index'>
             <CommentAdd />
             <CommentFilter />
             <CommentList />

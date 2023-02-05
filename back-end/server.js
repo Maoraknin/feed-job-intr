@@ -2,7 +2,6 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 const cookieParser = require('cookie-parser')
-
 const app = express()
 const http = require('http').createServer(app)
 
@@ -21,16 +20,13 @@ if (process.env.NODE_ENV === 'production') {
     app.use(cors(corsOptions))
 }
 
-// const authRoutes = require('./api/auth/auth.routes')
 const commentRoutes = require('./api/comment/comment.routes')
 
 // routes
 const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware')
 app.all('*', setupAsyncLocalStorage)
 
-// app.use('/api/auth', authRoutes)
 app.use('/api/comment', commentRoutes)
-// setupSocketAPI(http)
 
 app.get('/**', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))

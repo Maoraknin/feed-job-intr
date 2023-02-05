@@ -1,7 +1,8 @@
 const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
-const ObjectId = require('mongodb').ObjectId
-const asyncLocalStorage = require('../../services/als.service')
+const md5 = require('md5')
+// const ObjectId = require('mongodb').ObjectId
+// const asyncLocalStorage = require('../../services/als.service')
 
 async function query(filterBy = {}) {
     try {
@@ -24,7 +25,7 @@ async function add(comment) {
     try {
         const commentToAdd = {
             mail:comment.mail,
-            imgUrl:comment.imgUrl,
+            imgUrl: md5(comment.mail),
             txt: comment.txt
         }
         const collection = await dbService.getCollection('comment')
