@@ -3,7 +3,7 @@ import { loadComments } from "../../store/comment.action"
 import { CommentPreview } from "./comment-preview.jsx";
 
 
-export function CommentList() {
+export function CommentList({comments}) {
 
     const [comments, setComments] = useState([])
 
