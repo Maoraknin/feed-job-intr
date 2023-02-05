@@ -1,25 +1,25 @@
 import { useEffect } from "react"
 import { loadComments } from "../../store/comment.action" 
 
-export function CommentList() {
+export function CommentList({comments}) {
 
-    useEffect(() => {
-        getComments()
-    }, [])
+    // useEffect(() => {
+    //     getComments()
+    // }, [])
 
-    async function getComments(){
-        try{
-            const comments = await loadComments()
-            console.log('comments:',comments)
-        }
-        catch(err){
-            console.dir('err:',err)
-        }
-    }
+    // async function getComments(){
+    //     try{
+    //         const comments = await loadComments()
+    //         console.log('comments:',comments)
+    //     }
+    //     catch(err){
+    //         console.dir('err:',err)
+    //     }
+    // }
 
     return (
         <section className='comment-list'>
-            <CommentPreview />
+            {/* <CommentPreview /> */}
         </section>
     )
 

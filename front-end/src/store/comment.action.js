@@ -1,6 +1,6 @@
 import { commentService } from '../services/comment.service.js'
 import { store } from './store.js'
-import { SET_COMMENTS, ADD_COMMENT, SET_IS_LOADING } from './comment.reducer.js'
+import { SET_COMMENTS, ADD_COMMENT, SET_IS_LOADING, SET_FILTER } from './comment.reducer.js'
 
 export async function loadComments(filterBy) {
     store.dispatch({ type: SET_IS_LOADING, isLoading: true })
@@ -27,3 +27,6 @@ export async function saveComment(comment) {
     }
 }
 
+export function setFilter(filterBy) {
+    store.dispatch({ type: SET_FILTER, filterBy })
+}
