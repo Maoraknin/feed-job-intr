@@ -29,7 +29,7 @@ const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware')
 app.all('*', setupAsyncLocalStorage)
 
 // app.use('/api/auth', authRoutes)
-// app.use('/api/user', commentRoutes)
+app.use('/api/comment', commentRoutes)
 // setupSocketAPI(http)
 
 app.get('/**', (req, res) => {

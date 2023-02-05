@@ -5,7 +5,8 @@ const BASE_URL = 'comment/'
 export const commentService = {
     query,
     save,
-    getDefaultFilter
+    getDefaultFilter,
+    getEmptyComment
 }
 
 function query(filterBy = getDefaultFilter()) {
@@ -25,5 +26,11 @@ function getDefaultFilter() {
     return { content: '' }
 }
 
-
+function getEmptyComment() {
+    return {
+        mail: '',
+        imgUrl: 'https://res.cloudinary.com/dimirmc9j/image/upload/v1674060775/container-guide_wc4cyf.png',
+        txt: '',
+    }
+}
 

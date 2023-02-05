@@ -23,8 +23,8 @@ async function query(filterBy = {}) {
 async function add(comment) {
     try {
         const commentToAdd = {
-            mail: ObjectId(comment.mail),
-            imgUrl: ObjectId(comment.imgUrl),
+            mail:comment.mail,
+            imgUrl:comment.imgUrl,
             txt: comment.txt
         }
         const collection = await dbService.getCollection('comment')
